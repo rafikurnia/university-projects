@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench version="2.0">
+<workbenchAdvisor/>
+<window>
+<fastViewData fastViewLocation="1024">
+<orientation position="512" view="org.eclipse.debug.ui.ExpressionView"/>
+<orientation position="512" view="org.coocox.codebugger.trace.ui.traceview"/>
+<orientation position="512" view="org.eclipse.ui.console.ConsoleView"/>
+<orientation position="512" view="org.eclipse.debug.ui.VariableView"/>
+</fastViewData>
+<perspectiveBar/>
+<page focus="true" label="Workspace - CooCox CoBuilder">
+<editors>
+<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<info part="org.eclipse.ui.internal.EditorStack@7e02c2">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="25"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="35"/>
+<part id="24"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+<part id="30"/>
+<part id="31"/>
+<part id="32"/>
+<part id="33"/>
+<part id="34"/>
+<part id="36"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<<<<<<< HEAD
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Documents/GitHub/robusta/main.c" title="main.c" tooltip="D:/Documents/GitHub/robusta/main.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="262" selectionTopPixel="0"/>
+</editor>
+=======
+>>>>>>> d6e0f9416219c34921fffae46e1c9915927959a1
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="jalanDasar.c" partName="jalanDasar.c" path="D:/GitHub/robusta/lib/source/jalanDasar.c" title="jalanDasar.c" tooltip="D:/GitHub/robusta/lib/source/jalanDasar.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/jalanDasar.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5133" selectionTopPixel="5498"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.h" partName="main.h" path="C:/Users/Rudy/Documents/Rudy/github/robusta/main.h" title="main.h" tooltip="C:/Users/Rudy/Documents/Rudy/github/robusta/main.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/main.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="375" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="jalanDasar.h" partName="jalanDasar.h" path="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/include/jalanDasar.h" title="jalanDasar.h" tooltip="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/include/jalanDasar.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/jalanDasar.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="1606" selectionTopPixel="893"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="inisiasi.c" partName="inisiasi.c" path="D:/GitHub/robusta/lib/source/inisiasi.c" title="inisiasi.c" tooltip="D:/GitHub/robusta/lib/source/inisiasi.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/inisiasi.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="969" selectionTopPixel="237"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="wallFollowingKiri.h" partName="wallFollowingKiri.h" path="D:/GitHub/robusta/lib/include/wallFollowingKiri.h" title="wallFollowingKiri.h" tooltip="D:/GitHub/robusta/lib/include/wallFollowingKiri.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/wallFollowingKiri.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="102" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="rplidar.c" partName="rplidar.c" path="D:/GitHub/robusta/lib/source/rplidar.c" title="rplidar.c" tooltip="D:/GitHub/robusta/lib/source/rplidar.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/rplidar.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9264" selectionTopPixel="6854"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="rplidar.h" partName="rplidar.h" path="D:/GitHub/robusta/lib/include/rplidar.h" title="rplidar.h" tooltip="D:/GitHub/robusta/lib/include/rplidar.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/rplidar.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="68" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="i2c.c" partName="i2c.c" path="D:/GitHub/robusta/lib/source/i2c.c" title="i2c.c" tooltip="D:/GitHub/robusta/lib/source/i2c.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/i2c.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="2138" selectionTopPixel="1594"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_exti.h" partName="stm32f4xx_exti.h" path="D:/GitHub/robusta/cmsis_lib/include/stm32f4xx_exti.h" title="stm32f4xx_exti.h" tooltip="D:/GitHub/robusta/cmsis_lib/include/stm32f4xx_exti.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/cmsis_lib/include/stm32f4xx_exti.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="2008"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_exti.c" partName="stm32f4xx_exti.c" path="D:/GitHub/robusta/cmsis_lib/source/stm32f4xx_exti.c" title="stm32f4xx_exti.c" tooltip="D:/GitHub/robusta/cmsis_lib/source/stm32f4xx_exti.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/cmsis_lib/source/stm32f4xx_exti.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5902" selectionTopPixel="1677"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="exti0.c" partName="exti0.c" path="D:/GitHub/robusta/lib/source/exti0.c" title="exti0.c" tooltip="D:/GitHub/robusta/lib/source/exti0.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/exti0.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="22" selectionOffset="3693" selectionTopPixel="1864"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="exti0.h" partName="exti0.h" path="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/include/exti0.h" title="exti0.h" tooltip="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/include/exti0.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/exti0.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="443" selectionTopPixel="119"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="pins.c" partName="pins.c" path="D:/GitHub/robusta/lib/source/pins.c" title="pins.c" tooltip="D:/GitHub/robusta/lib/source/pins.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/pins.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="542" selectionTopPixel="56"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="proximity.c" partName="proximity.c" path="D:/GitHub/robusta/lib/source/proximity.c" title="proximity.c" tooltip="D:/GitHub/robusta/lib/source/proximity.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/proximity.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="491" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="tombol.c" partName="tombol.c" path="D:/GitHub/robusta/lib/source/tombol.c" title="tombol.c" tooltip="D:/GitHub/robusta/lib/source/tombol.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/tombol.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1013" selectionTopPixel="315"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="liblcd.c" partName="liblcd.c" path="D:/GitHub/robusta/lib/source/liblcd.c" title="liblcd.c" tooltip="D:/GitHub/robusta/lib/source/liblcd.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/liblcd.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2575" selectionTopPixel="652"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="tombol.h" partName="tombol.h" path="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/include/tombol.h" title="tombol.h" tooltip="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/include/tombol.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/tombol.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="403" selectionTopPixel="7"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="kipas.c" partName="kipas.c" path="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/source/kipas.c" title="kipas.c" tooltip="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/source/kipas.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/kipas.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="166" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="kipas.h" partName="kipas.h" path="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/include/kipas.h" title="kipas.h" tooltip="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/include/kipas.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/kipas.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="14" selectionOffset="82" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.h" partName="stm32f4xx_gpio.h" path="C:/Users/Rudy/Documents/Rudy/github/robusta/cmsis_lib/include/stm32f4xx_gpio.h" title="stm32f4xx_gpio.h" tooltip="C:/Users/Rudy/Documents/Rudy/github/robusta/cmsis_lib/include/stm32f4xx_gpio.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/cmsis_lib/include/stm32f4xx_gpio.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5944" selectionTopPixel="2287"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx.h" partName="stm32f4xx.h" path="C:/Users/Rudy/Documents/Rudy/github/robusta/cmsis_boot/stm32f4xx.h" title="stm32f4xx.h" tooltip="C:/Users/Rudy/Documents/Rudy/github/robusta/cmsis_boot/stm32f4xx.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/cmsis_boot/stm32f4xx.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="69958" selectionTopPixel="18688"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" partName="pins.h" path="D:/GitHub/robusta/lib/include/pins.h" title="pins.h" tooltip="D:/GitHub/robusta/lib/include/pins.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/pins.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="60" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="navigasi.c" partName="navigasi.c" path="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/source/navigasi.c" title="navigasi.c" tooltip="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/source/navigasi.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/navigasi.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="342" selectionTopPixel="55"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="liblcd.h" partName="liblcd.h" path="D:/GitHub/robusta/lib/include/liblcd.h" title="liblcd.h" tooltip="D:/GitHub/robusta/lib/include/liblcd.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/liblcd.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2138" selectionTopPixel="809"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="lcd16x2.c" partName="lcd16x2.c" path="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/source/lcd16x2.c" title="lcd16x2.c" tooltip="C:/Users/Rudy/Documents/Rudy/github/robusta/lib/source/lcd16x2.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/lcd16x2.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1931" selectionTopPixel="1307"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/GitHub/robusta/main.c" title="main.c" tooltip="D:/GitHub/robusta/main.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="831" selectionTopPixel="588"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="wallFollowing.h" partName="wallFollowing.h" path="D:/GitHub/robusta/lib/include/wallFollowing.h" title="wallFollowing.h" tooltip="D:/GitHub/robusta/lib/include/wallFollowing.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/wallFollowing.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="611" selectionTopPixel="111"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="tes.c" partName="tes.c" path="D:/GitHub/robusta/lib/source/tes.c" title="tes.c" tooltip="D:/GitHub/robusta/lib/source/tes.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/tes.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="84" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="colorSensor.c" partName="colorSensor.c" path="D:/GitHub/robusta/lib/source/colorSensor.c" title="colorSensor.c" tooltip="D:/GitHub/robusta/lib/source/colorSensor.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/colorSensor.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3772" selectionTopPixel="1499"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="wallFollowingKiri.c" partName="wallFollowingKiri.c" path="D:/GitHub/robusta/lib/source/wallFollowingKiri.c" title="wallFollowingKiri.c" tooltip="D:/GitHub/robusta/lib/source/wallFollowingKiri.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/wallFollowingKiri.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="196" selectionOffset="257" selectionTopPixel="182"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="tes.h" partName="tes.h" path="D:/GitHub/robusta/lib/include/tes.h" title="tes.h" tooltip="D:/GitHub/robusta/lib/include/tes.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/tes.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="28" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="proximity.h" partName="proximity.h" path="D:/GitHub/robusta/lib/include/proximity.h" title="proximity.h" tooltip="D:/GitHub/robusta/lib/include/proximity.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/proximity.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="140" selectionOffset="323" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="delay.c" partName="delay.c" path="D:/GitHub/robusta/lib/source/delay.c" title="delay.c" tooltip="D:/GitHub/robusta/lib/source/delay.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/delay.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="1137" selectionTopPixel="408"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="i2c.h" partName="i2c.h" path="D:/GitHub/robusta/lib/include/i2c.h" title="i2c.h" tooltip="D:/GitHub/robusta/lib/include/i2c.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/i2c.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2188" selectionTopPixel="697"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="wallFollowingKanan.h" partName="wallFollowingKanan.h" path="D:/GitHub/robusta/lib/include/wallFollowingKanan.h" title="wallFollowingKanan.h" tooltip="D:/GitHub/robusta/lib/include/wallFollowingKanan.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/wallFollowingKanan.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="wallFollowingKanan.c" partName="wallFollowingKanan.c" path="D:/GitHub/robusta/lib/source/wallFollowingKanan.c" title="wallFollowingKanan.c" tooltip="D:/GitHub/robusta/lib/source/wallFollowingKanan.c" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/source/wallFollowingKanan.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="179" selectionTopPixel="1414"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="colorSensor.h" partName="colorSensor.h" path="D:/GitHub/robusta/lib/include/colorSensor.h" title="colorSensor.h" tooltip="D:/GitHub/robusta/lib/include/colorSensor.h" workbook="org.eclipse.ui.internal.EditorStack@7e02c2">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Berkaki2015/lib/include/colorSensor.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="172" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
+<<<<<<< HEAD
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
+=======
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="34">
+>>>>>>> d6e0f9416219c34921fffae46e1c9915927959a1
+<expanded>
+<element path="/Berkaki2015"/>
+<element path="/Berkaki2015/cmsis_boot"/>
+<element path="/Berkaki2015/lib"/>
+<element path="/Berkaki2015/lib/include"/>
+<element path="/Berkaki2015/lib/source"/>
+<element path="/Berkaki2015/stdio"/>
+</expanded>
+<selection>
+<<<<<<< HEAD
+<element path="/Berkaki2015"/>
+=======
+<element path="/Berkaki2015/lib/include/wallFollowingKiri.h"/>
+>>>>>>> d6e0f9416219c34921fffae46e1c9915927959a1
+</selection>
+</viewState>
+</view>
+<view id="org.coocox.component.ui.ComponentView" partName="Components">
+<viewState/>
+</view>
+<view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting">
+<viewState/>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.coocox.builder.ui.views.ProjectView" activePerspective="org.coocox.builder.perspective.CoBuilder">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.coocox.builder.ui.PerspectiveCoBuilder" id="org.coocox.builder.perspective.CoBuilder" label="CooCox CoBuilder"/>
+<alwaysOnActionSet id="org.coocox.component.ui.actionSet"/>
+<alwaysOnActionSet id="org.coocox.welcome.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.coocox.userspace.actionSet"/>
+<hide_menu_item_id id="org.coocox.codebugger.configuration.showMemoryAction"/>
+<hide_menu_item_id id="org.eclipse.jdt.ui.refactoring.menu"/>
+<hide_menu_item_id id="org.coocox.codebugger.configuration.ShowDisassemblyAction"/>
+<hide_menu_item_id id="org.coocox.codebugger.configuration.showExpressionsAction"/>
+<hide_menu_item_id id="org.coocox.codebugger.configuration.showDebugAction"/>
+<hide_menu_item_id id="org.coocox.codebugger.configuration.showConsoleAction"/>
+<hide_menu_item_id id="org.eclipse.cdt.debug.internal.ui.actions.ToggleInstructionStepModeAction"/>
+<hide_menu_item_id id="org.eclipse.jdt.ui.source.menu"/>
+<hide_menu_item_id id="org.coocox.codebugger.configuration.showMemoryBrowserAction"/>
+<hide_menu_item_id id="org.coocox.codebugger.configuration.showVariablesAction"/>
+<hide_menu_item_id id="org.coocox.builder.ui.openProjectExplorerAction"/>
+<hide_menu_item_id id="org.coocox.codebugger.trace.actions.ShowTraceControlAction"/>
+<hide_menu_item_id id="org.eclipse.debug.ui.commands.TerminateAndRelaunch"/>
+<hide_menu_item_id id="org.coocox.codebugger.configuration.showRegistersAction"/>
+<hide_toolbar_item_id id="org.eclipse.cdt.debug.internal.ui.actions.ToggleInstructionStepModeAction"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<hide_toolbar_item_id id="org.eclipse.debug.ui.commands.TerminateAndRelaunch"/>
+<<<<<<< HEAD
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.coocox.builder.ui.views.ProjectView"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="16384" id="org.eclipse.ui.internal.ViewStack@934377" orientation="256" selectedTabId="org.coocox.component.ui.ComponentView" style="0">
+<fastViews>
+<view id="org.coocox.component.ui.ComponentView" ratio="0.3"/>
+=======
+<view id="org.coocox.builder.ui.views.ProjectView"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1015ce0" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
+<fastViews>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.2657005"/>
+<view id="org.eclipse.search.ui.views.SearchView" ratio="0.3"/>
+>>>>>>> d6e0f9416219c34921fffae46e1c9915927959a1
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@934377">
+<<<<<<< HEAD
+<folder appearance="2" expanded="0">
+=======
+<folder appearance="2" expanded="2">
+>>>>>>> d6e0f9416219c34921fffae46e1c9915927959a1
+<page content="org.coocox.component.ui.ComponentView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.internal.ViewStack@934377">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+</folder>
+</info>
+<<<<<<< HEAD
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1015ce0" ratio="0.79937303" ratioLeft="510" ratioRight="128" relationship="4" relative="org.eclipse.ui.internal.ViewStack@934377">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+=======
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1015ce0" ratio="0.69093853" ratioLeft="427" ratioRight="191" relationship="4" relative="org.eclipse.ui.internal.ViewStack@934377">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+>>>>>>> d6e0f9416219c34921fffae46e1c9915927959a1
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@17aa549" ratio="0.20221402" ratioLeft="274" ratioRight="1081" relationship="2" relative="org.eclipse.ui.internal.ViewStack@934377">
+<folder appearance="2" expanded="2">
+<page content="org.coocox.builder.ui.exampleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@185d51d" ratio="0.72031665" ratioLeft="273" ratioRight="106" relationship="2" relative="org.eclipse.ui.internal.ViewStack@17aa549">
+<folder appearance="2" expanded="2">
+<page content="org.coocox.component.ui.Help" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.coocox.coassistant.view.CoAssistantView" label="LabelNotFound"/>
+<page content="org.coocox.builder.ui.MoreExampleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.44927537" ratioLeft="279" ratioRight="342" relationship="4" relative="org.eclipse.ui.internal.ViewStack@17aa549"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@325184" ratio="0.36876008" ratioLeft="229" ratioRight="392" relationship="4" relative="org.eclipse.ui.internal.ViewStack@934377">
+<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
+<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.coocox.codebugger.configuration.ui.Perspective" id="org.coocox.codebugger.configuration.perspective" label="CoDebugger"/>
+<alwaysOnActionSet id="org.coocox.component.ui.actionSet"/>
+<alwaysOnActionSet id="org.coocox.welcome.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<hide_menu_item_id id="org.coocox.builder.ui.newFolder"/>
+<hide_menu_item_id id="org.coocox.welcome.ui.action.repository"/>
+<hide_menu_item_id id="org.eclipse.ui.file.save"/>
+<hide_menu_item_id id="org.eclipse.jdt.ui.refactoring.menu"/>
+<hide_menu_item_id id="org.eclipse.ui.file.saveAll"/>
+<hide_menu_item_id id="org.coocox.builder.ui.rebuild"/>
+<hide_menu_item_id id="org.coocox.builder.ui.openFile"/>
+<hide_menu_item_id id="org.eclipse.ui.file.saveAs"/>
+<hide_menu_item_id id="org.coocox.builder.rcp.projectMenu"/>
+<hide_menu_item_id id="org.coocox.builder.rcp.flashMenu"/>
+<hide_menu_item_id id="org.coocox.builder.ui.debug"/>
+<hide_menu_item_id id="org.coocox.builder.ui.showHelpViewAction"/>
+<hide_menu_item_id id="org.coocox.builder.ui.newFile"/>
+<hide_menu_item_id id="org.coocox.builder.ui.actions.ConfigurationAction"/>
+<hide_menu_item_id id="org.eclipse.jdt.ui.source.menu"/>
+<hide_menu_item_id id="org.coocox.builder.ui.build"/>
+<hide_menu_item_id id="org.coocox.welcome.ui.action.welcome"/>
+<hide_menu_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.actions.TargetManageAction"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.newProject"/>
+<hide_toolbar_item_id id="org.coocox.welcome.ui.action.repository"/>
+<hide_toolbar_item_id id="org.eclipse.ui.file.save"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.rebuild"/>
+<hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideFlashEraseAction"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.debug"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.newFile"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.actions.ConfigurationAction"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.build"/>
+<hide_toolbar_item_id id="org.coocox.welcome.ui.action.welcome"/>
+<hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideProgramDownloadAction"/>
+<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.coocox.codebugger.trace.ui.traceview"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.coocox.builder.ui.views.ProjectView"/>
+<fastViewBars/>
+<viewLayoutRec closeable="false" id="org.eclipse.debug.ui.DebugView"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@729b5d">&#x0A;<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.internal.ViewStack@729b5d">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@4de91" ratio="0.69952303" ratioLeft="440" ratioRight="189" relationship="4" relative="org.eclipse.ui.internal.ViewStack@729b5d">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1b03a05" ratio="0.5" ratioLeft="679" ratioRight="679" relationship="2" relative="org.eclipse.ui.internal.ViewStack@4de91">&#x0A;<folder activePageID="org.coocox.codebugger.trace.ui.traceview" appearance="2" expanded="2">&#x0A;<page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@b11f20" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.internal.ViewStack@729b5d">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<page content="org.coocox.coassistant.view.CoAssistantView_debug" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.29960707" ratioLeft="305" ratioRight="713" relationship="2" relative="org.eclipse.ui.internal.ViewStack@729b5d"/>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Berkaki2015/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Berkaki2015/lib/source/wallFollowingKiri.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Berkaki2015/lib/source/wallFollowingKanan.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Berkaki2015/lib/source/jalanDasar.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Berkaki2015/lib/source/colorSensor.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Berkaki2015/lib/include/wallFollowingKiri.h"/>
+</editors>
+<item historyLabel="colorSensor.c" index="4">
+<position info="not_deleted" x="3566" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2240" y="0"/>
+</item>
+<item historyLabel="jalanDasar.c" index="3">
+<position info="not_deleted" x="5133" y="0"/>
+</item>
+<item historyLabel="colorSensor.c" index="4">
+<position info="not_deleted" x="3746" y="0"/>
+</item>
+<item historyLabel="wallFollowingKiri.c" index="1">
+<position info="not_deleted" x="1010" y="906"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position/>
+</item>
+<item historyLabel="wallFollowingKiri.c" index="1">
+<position info="not_deleted" x="1859" y="0"/>
+</item>
+<item historyLabel="jalanDasar.c" index="3">
+<position info="not_deleted" x="5133" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="1077" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="180" y="0"/>
+</item>
+<item historyLabel="wallFollowingKiri.c" index="1">
+<position info="not_deleted" x="1859" y="0"/>
+</item>
+<item historyLabel="wallFollowingKiri.h" index="5">
+<position info="not_deleted" x="356" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="1404" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="796" y="0"/>
+</item>
+<item historyLabel="wallFollowingKiri.c" index="1">
+<position info="not_deleted" x="445" y="0"/>
+</item>
+<item historyLabel="wallFollowingKiri.h" index="5">
+<position info="not_deleted" x="360" y="11"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="937" y="0"/>
+</item>
+<item historyLabel="wallFollowingKiri.c" index="1">
+<position info="not_deleted" x="232" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="937" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="184" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position/>
+</item>
+<item historyLabel="wallFollowingKiri.h" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position/>
+</item>
+<item historyLabel="wallFollowingKiri.c" index="1">
+<position info="not_deleted" x="257" y="196"/>
+</item>
+<item historyLabel="wallFollowingKiri.h" index="5">
+<position info="not_deleted" x="102" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="1077" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="180" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="180" y="0"/>
+</item>
+<item historyLabel="wallFollowingKiri.c" index="1">
+<position info="not_deleted" x="257" y="196"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="588" y="14"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="418" y="0"/>
+</item>
+<item historyLabel="wallFollowingKiri.c" index="1">
+<position info="not_deleted" x="257" y="196"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="418" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="336" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="336" y="0"/>
+</item>
+<item historyLabel="wallFollowingKiri.c" index="1">
+<position info="not_deleted" x="257" y="196"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="336" y="0"/>
+</item>
+<item historyLabel="wallFollowingKiri.c" index="1">
+<position info="not_deleted" x="257" y="196"/>
+</item>
+<item historyLabel="wallFollowingKiri.h" index="5">
+<position info="not_deleted" x="102" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="336" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="146" y="0"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="179" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="588" y="14"/>
+</item>
+<item historyLabel="wallFollowingKanan.c" index="2">
+<position info="not_deleted" x="179" y="0"/>
+</item>
+<item historyLabel="colorSensor.c" index="4">
+<position info="not_deleted" x="3772" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="588" y="14"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position/>
+</item>
+<item historyLabel="wallFollowingKiri.h" index="5">
+<position info="not_deleted" x="102" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="0">
+<position/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="colorSensor.h" tooltip="Berkaki2015/lib/include/colorSensor.h">
+<persistable path="/Berkaki2015/lib/include/colorSensor.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wallFollowingKanan.h" tooltip="Berkaki2015/lib/include/wallFollowingKanan.h">
+<persistable path="/Berkaki2015/lib/include/wallFollowingKanan.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="i2c.h" tooltip="Berkaki2015/lib/include/i2c.h">
+<persistable path="/Berkaki2015/lib/include/i2c.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.c" tooltip="Berkaki2015/lib/source/delay.c">
+<persistable path="/Berkaki2015/lib/source/delay.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="proximity.h" tooltip="Berkaki2015/lib/include/proximity.h">
+<persistable path="/Berkaki2015/lib/include/proximity.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tes.h" tooltip="Berkaki2015/lib/include/tes.h">
+<persistable path="/Berkaki2015/lib/include/tes.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="colorSensor.c" tooltip="Berkaki2015/lib/source/colorSensor.c">
+<persistable path="/Berkaki2015/lib/source/colorSensor.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tes.c" tooltip="Berkaki2015/lib/source/tes.c">
+<persistable path="/Berkaki2015/lib/source/tes.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="liblcd.c" tooltip="Berkaki2015/lib/source/liblcd.c">
+<persistable path="/Berkaki2015/lib/source/liblcd.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins.c" tooltip="Berkaki2015/lib/source/pins.c">
+<persistable path="/Berkaki2015/lib/source/pins.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lcd16x2.c" tooltip="Berkaki2015/lib/source/lcd16x2.c">
+<persistable path="/Berkaki2015/lib/source/lcd16x2.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="exti0.h" tooltip="Berkaki2015/lib/include/exti0.h">
+<persistable path="/Berkaki2015/lib/include/exti0.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="exti0.c" tooltip="Berkaki2015/lib/source/exti0.c">
+<persistable path="/Berkaki2015/lib/source/exti0.c"/>
+</file>
+<<<<<<< HEAD
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="inisiasi.c" tooltip="Berkaki2015/lib/source/inisiasi.c">
+<persistable path="/Berkaki2015/lib/source/inisiasi.c"/>
+=======
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_exti.c" tooltip="Berkaki2015/cmsis_lib/source/stm32f4xx_exti.c">
+<persistable path="/Berkaki2015/cmsis_lib/source/stm32f4xx_exti.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_exti.h" tooltip="Berkaki2015/cmsis_lib/include/stm32f4xx_exti.h">
+<persistable path="/Berkaki2015/cmsis_lib/include/stm32f4xx_exti.h"/>
+>>>>>>> d6e0f9416219c34921fffae46e1c9915927959a1
+</file>
+</mruList>
+</workbench>
