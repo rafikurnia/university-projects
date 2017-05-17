@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1469990763 source:d:\dropbox\kodingan pkm\socket\socket\main.c
+	<io.h>
+	<stdio.h>
+	<winsock2.h>
+	<time.h>
+
