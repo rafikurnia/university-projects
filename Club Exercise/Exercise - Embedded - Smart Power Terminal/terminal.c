@@ -1,0 +1,310 @@
+/*******************************************************
+Project : Exercise - Embedded Division - Smart Power Terminal
+Date    : 13/06/2014
+Author  : Rafi Kurnia Putra
+Company : Universitas Indonesia
+
+Chip type               : ATmega16
+Program type            : Application
+AVR Core Clock frequency: 11,059200 MHz
+Memory model            : Small
+External RAM size       : 0
+Data Stack size         : 256
+*******************************************************/
+
+#include <mega16.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <delay.h>
+#include <alcd.h>
+
+#define ADC_VREF_TYPE ((0<<REFS1) | (0<<REFS0) | (0<<ADLAR))
+
+#define t1on  PORTB.0 = 1;
+#define t1off PORTB.0 = 0;
+#define t2on  PORTB.1 = 1;
+#define t2off PORTB.1 = 0;
+#define t3on  PORTB.2 = 1;
+#define t3off PORTB.2 = 0;
+#define t4on  PORTB.3 = 1;
+#define t4off PORTB.3 = 0;
+
+int state[4] = {0}, menu = 0;
+
+void port_setup()
+{
+	DDRA=(0<<DDA7) | (0<<DDA6) | (0<<DDA5) | (0<<DDA4) | (0<<DDA3) | (0<<DDA2) | (0<<DDA1) | (0<<DDA0);
+	PORTA=(0<<PORTA7) | (0<<PORTA6) | (0<<PORTA5) | (0<<PORTA4) | (0<<PORTA3) | (0<<PORTA2) | (0<<PORTA1) | (0<<PORTA0);
+	
+	DDRB=(0<<DDB7) | (0<<DDB6) | (0<<DDB5) | (0<<DDB4) | (1<<DDB3) | (1<<DDB2) | (1<<DDB1) | (1<<DDB0);
+	PORTB=(0<<PORTB7) | (0<<PORTB6) | (0<<PORTB5) | (0<<PORTB4) | (0<<PORTB3) | (0<<PORTB2) | (0<<PORTB1) | (0<<PORTB0);
+	
+	DDRC=(1<<DDC7) | (1<<DDC6) | (1<<DDC5) | (1<<DDC4) | (1<<DDC3) | (1<<DDC2) | (1<<DDC1) | (1<<DDC0);
+	PORTC=(0<<PORTC7) | (0<<PORTC6) | (0<<PORTC5) | (0<<PORTC4) | (0<<PORTC3) | (0<<PORTC2) | (0<<PORTC1) | (0<<PORTC0);
+	
+	DDRD=(1<<DDD7) | (1<<DDD6) | (1<<DDD5) | (1<<DDD4) | (1<<DDD3) | (1<<DDD2) | (1<<DDD1) | (1<<DDD0);
+	PORTD=(0<<PORTD7) | (0<<PORTD6) | (0<<PORTD5) | (0<<PORTD4) | (0<<PORTD3) | (0<<PORTD2) | (0<<PORTD1) | (0<<PORTD0);
+}
+
+void misc_setup()
+{
+	TCCR0=(0<<WGM00) | (0<<COM01) | (0<<COM00) | (0<<WGM01) | (0<<CS02) | (0<<CS01) | (0<<CS00);
+	TCNT0=0x00;
+	OCR0=0x00;
+	TCCR1A=(0<<COM1A1) | (0<<COM1A0) | (0<<COM1B1) | (0<<COM1B0) | (0<<WGM11) | (0<<WGM10);
+	TCCR1B=(0<<ICNC1) | (0<<ICES1) | (0<<WGM13) | (0<<WGM12) | (0<<CS12) | (0<<CS11) | (0<<CS10);
+	TCNT1H=0x00;
+	TCNT1L=0x00;
+	ICR1H=0x00;
+	ICR1L=0x00;
+	OCR1AH=0x00;
+	OCR1AL=0x00;
+	OCR1BH=0x00;
+	OCR1BL=0x00;
+	ASSR=0<<AS2;
+	TCCR2=(0<<PWM2) | (0<<COM21) | (0<<COM20) | (0<<CTC2) | (0<<CS22) | (0<<CS21) | (0<<CS20);
+	TCNT2=0x00;
+	OCR2=0x00;
+	TIMSK=(0<<OCIE2) | (0<<TOIE2) | (0<<TICIE1) | (0<<OCIE1A) | (0<<OCIE1B) | (0<<TOIE1) | (0<<OCIE0) | (0<<TOIE0);
+	MCUCR=(0<<ISC11) | (0<<ISC10) | (0<<ISC01) | (0<<ISC00);
+	MCUCSR=(0<<ISC2);
+	UCSRB=(0<<RXCIE) | (0<<TXCIE) | (0<<UDRIE) | (0<<RXEN) | (0<<TXEN) | (0<<UCSZ2) | (0<<RXB8) | (0<<TXB8);
+	ACSR=(1<<ACD) | (0<<ACBG) | (0<<ACO) | (0<<ACI) | (0<<ACIE) | (0<<ACIC) | (0<<ACIS1) | (0<<ACIS0);
+	ADMUX=ADC_VREF_TYPE;
+	ADCSRA=(1<<ADEN) | (0<<ADSC) | (0<<ADATE) | (0<<ADIF) | (0<<ADIE) | (1<<ADPS2) | (0<<ADPS1) | (0<<ADPS0);
+	SFIOR=(0<<ADTS2) | (0<<ADTS1) | (0<<ADTS0);
+	SPCR=(0<<SPIE) | (0<<SPE) | (0<<DORD) | (0<<MSTR) | (0<<CPOL) | (0<<CPHA) | (0<<SPR1) | (0<<SPR0);
+	TWCR=(0<<TWEA) | (0<<TWSTA) | (0<<TWSTO) | (0<<TWEN) | (0<<TWIE);
+}
+
+void cek_reset()
+{
+	if (MCUCSR & (1<<PORF)) MCUCSR&=~((1<<JTRF) | (1<<WDRF) | (1<<BORF) | (1<<EXTRF) | (1<<PORF));
+	else if (MCUCSR & (1<<EXTRF)) MCUCSR&=~((1<<JTRF) | (1<<WDRF) | (1<<BORF) | (1<<EXTRF) | (1<<PORF));
+	else if (MCUCSR & (1<<BORF)) MCUCSR&=~((1<<JTRF) | (1<<WDRF) | (1<<BORF) | (1<<EXTRF) | (1<<PORF));
+	else if (MCUCSR & (1<<WDRF)) MCUCSR&=~((1<<JTRF) | (1<<WDRF) | (1<<BORF) | (1<<EXTRF) | (1<<PORF));
+	else if (MCUCSR & (1<<JTRF)) MCUCSR&=~((1<<JTRF) | (1<<WDRF) | (1<<BORF) | (1<<EXTRF) | (1<<PORF));
+}
+
+unsigned int baca_sensor(unsigned char adc_input)
+{
+	ADMUX=adc_input | ADC_VREF_TYPE;
+	delay_us(10);
+	ADCSRA|=(1<<ADSC);
+	while ((ADCSRA & (1<<ADIF))==0);
+	ADCSRA|=(1<<ADIF);
+	return ADCW;
+}
+
+bool cek_pir()
+{
+	if (PINB.4 == 1) return true;
+	else return false;
+}
+
+bool cek_suhu()
+{
+	if (baca_sensor(0) > 512) return true;
+	else return false;
+} 
+
+bool cek_cahaya()
+{
+	if (baca_sensor(0) > 512) return true;
+	else return false;
+}
+
+int baca_keypad()
+{
+	while(1)
+	{
+		PORTD.4=0;
+		delay_ms(10);
+		if      (PIND.0==0){return 1;}
+		else if (PIND.1==0){return 2;}
+		else if (PIND.2==0){return 3;}
+		
+		PORTD.4=1; PORTD.5=0;
+		delay_ms(10);
+		if      (PIND.0==0){return 4;}
+		//else if (PIND.1==0){return 5;}
+		//else if (PIND.2==0){return 6;}
+		
+		PORTD.5=1; //PORTD.6=0;
+		//delay_ms(10);
+		//if      (PIND.0==0){return 7;}
+		//else if (PIND.1==0){return 8;}
+		//else if (PIND.2==0){return 9;}
+		
+		/*PORTD.6=1;*/ PORTD.7=0;
+		delay_ms(10);
+		if      (PIND.1==0){return 0;}
+		
+		PORTD.7=1;
+		delay_ms(10);
+	}
+}
+
+void gui()
+{
+	int pilih=0;
+	
+	if (menu==0)
+	{
+		lcd_clear();
+		lcd_gotoxy(0,0);
+		lcd_putsf("EmbeddedExercise");
+		lcd_gotoxy(0,1);
+		lcd_putsf("Silahkan Pilih Terminal");
+		pilih=baca_keypad();
+		if (pilih != 0) menu=pilih;
+	}
+	else if (menu==1)
+	{
+		lcd_clear();
+		lcd_gotoxy(0,0);
+		lcd_putsf("Terminal 1");
+		lcd_gotoxy(0,1);
+		lcd_putsf("1.PIR 2.T 3.CHY");
+		pilih = baca_keypad();
+		if (pilih != 0) state[0] = pilih;
+		else menu=0;
+	}
+	else if (menu==2)
+	{
+		lcd_clear();
+		lcd_gotoxy(0,0);
+		lcd_putsf("Terminal 2");
+		lcd_gotoxy(0,1);
+		lcd_putsf("1.PIR 2.T 3.CHY");
+		pilih = baca_keypad();
+		if (pilih != 0) state[1] = pilih;
+		else menu=0;
+	}
+	else if (menu==3)
+	{
+		lcd_clear();
+		lcd_gotoxy(0,0);
+		lcd_putsf("Terminal 3");
+		lcd_gotoxy(0,1);
+		lcd_putsf("1.PIR 2.T 3.CHY");
+		pilih = baca_keypad();
+		if (pilih != 0) state[2] = pilih;
+		else menu=0;
+	}
+	else if (menu==4)
+	{
+		lcd_clear();
+		lcd_gotoxy(0,0);
+		lcd_putsf("Terminal 4");
+		lcd_gotoxy(0,1);
+		lcd_putsf("1.PIR 2.T 3.CHY");
+		pilih = baca_keypad();
+		if (pilih != 0) state[3] = pilih;
+		else menu=0;
+	}    
+}
+
+void program_utama()
+{
+    int i;
+	while(1)
+	{
+		gui();
+		for (i=0;i<4;i++)
+		{
+			switch(state[i])
+			{
+			case 0:
+				switch(i)
+				{
+				case 0:
+					t1off;
+					break;
+				case 1:
+					t2off;
+					break;
+				case 2:
+					t3off;
+					break;
+				case 3:
+					t4off;
+					break;
+				}
+				break;
+			case 1:
+				switch(i)
+				{
+				case 0:
+					if (cek_pir()) t1on;
+					else t1off;
+					break;
+				case 1:
+					if (cek_pir()) t2on;
+					else t2off;
+					break;
+				case 2:
+					if (cek_pir()) t3on;
+					else t3off;
+					break;
+				case 3:
+					if (cek_pir()) t4on;
+					else t4off;
+					break;
+				}
+				break;
+			case 2:
+				switch(i)
+				{
+				case 0:
+					if (cek_suhu()) t1on;
+					else t1off;
+					break;
+				case 1:
+					if (cek_suhu()) t2on;
+					else t2off;
+					break;
+				case 2:
+					if (cek_suhu()) t3on;
+					else t3off;
+					break;
+				case 3:
+					if (cek_suhu()) t4on;
+					else t4off;
+					break;
+				}
+				break;
+			case 3:
+				switch(i)
+				{
+				case 0:
+					if (cek_cahaya()) t1on;
+					else t1off;
+					break;
+				case 1:
+					if (cek_cahaya()) t2on;
+					else t2off;
+					break;
+				case 2:
+					if (cek_cahaya()) t3on;
+					else t3off;
+					break;
+				case 3:
+					if (cek_cahaya()) t4on;
+					else t4off;
+					break;
+				}
+				break;
+			}        
+		}
+	}
+}
+
+void main(void)
+{
+	port_setup();
+	misc_setup();
+	cek_reset();
+	lcd_init(16);
+	program_utama();
+}
