@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=GND Pin=G 5 I O-1
+Removed Pin From Net: NetName=+5 Pin=G 5 I O-2
+Removed Pin From Net: NetName=Net330-1_1 Pin=G 5 I O-3
+Removed Pin From Net: NetName=NetIn_4 Pin=G 5 I O-4
+Removed Member From Class: ClassName=Relay Member=G 5 I O
+Change Component Designator: OldDesignator=330 NewDesignator=330-1
+Added Component: Designator=P?(HDR1X7)
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Pin To Net: NetName=+5 Pin=P?-3
+Added Pin To Net: NetName=Net330-1_1 Pin=P?-5
+Added Pin To Net: NetName=NetIn_4 Pin=P?-7
+Change Net Name : Old Net Name=NetIn_4 New Net Name=NetP?_7
+Change Class Name : Old Net Name=Relay New Net Name=Relay-2
+Added Member To Class: ClassName=Relay-2 Member=Component P? Header 7
+Added Room: Name=Relay-2

@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=Net330-1_1 Pin=P?-5
+Removed Pin From Net: NetName=NetP?_7 Pin=P?-7
+Change Component Designator: OldDesignator=330 NewDesignator=330-1
+Added Pin To Net: NetName=NetP?_7 Pin=P?-5
+Added Pin To Net: NetName=Net330-1_1 Pin=P?-7
+Change Net Name : Old Net Name=NetP?_7 New Net Name=NetP?_5
+Added Room: Name=Relay-2

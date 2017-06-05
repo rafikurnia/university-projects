@@ -1,0 +1,489 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD15\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">25/12/2015</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">4:40:05</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc" class="file"><acronym title="D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc">D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">37</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDDKEG4XCJBTB4CVHUUAXZHEYXG5140ZOCCNWAHIYVM2HQLDEDCM"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTWUIUBDZNZFSGPCTS2JD2G2XMEAZDK1DFKBIG2OHSA11NMHZ3P2D">Room respi (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('respi'))</a></td>
+<td class="column2">14</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUUR0HMP2EGZ2OJGAIZWQEH2PJJFDQYTDRL3GN4LMH41U5UCMVUXM">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIK1CZX41XYKYBQFF1BCWO5ITNDXTCVDJ3PTZEWIPQZX5XEDVAVEB">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDF4TPAPN4EU2YI54XOIGEPA1T2DB5EAZZNNILI0EWR3D0HSL4HM3">Silk primitive without silk layer</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDESS5VLGSO3TOGMTFNVPUZ2EBIJRDG3JR5PONRKIX2YVZLHRAWYMP">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPNVRWWAN2I11BZLYZNAS2BNWUHDOCJ0KTR5VK3DLW3HHDLH0VPJP">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">22</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA4VUG1VBPZDWMLLNRGHFTU0M0LXAOXURMNZMDPC2AY54TOHOO14D">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJW4AKLJWJCGSSOUIMUXNXTEVEUBBR2121QDOEDPADP5SIRC2XWE">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDR1XLOA5BLTOOK2MRL1AYCORWS12O1ZFVTJ11XFKTC1IWKQCNWUC">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQXY21BBVNG1FEHVZNWF0ZFRS1LD5GHKGXLLJYQKY0LLEL0W1W4ON">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKHVVHXVXW41CP55TNCJ4Q0PYBNDO225CYZ3LU3LXP0ZK5FBHAVTO">Width Constraint (Min=11.811mil) (Max=27.559mil) (Preferred=19.685mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0CX45YNAJH4PPIVTDLOIAAASYL5NNHQWFMJOZUICDM3UOVYUQJNG">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGU1SZ1CTYNVFPNJXURV4DKIQRLQ20A0SIHD0BWEDZALRFALOMKEB">Clearance Constraint (Gap=11.811mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2INME3AYJ3VQNSPIQ1A0H54UOBO4TNK0VYNBEVHW3JWPB0XESAEG">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDK32OJ4IUIT3UK0002M3TGS34KPR5MZHASUTRRMCHI3RTK5G5OWV">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">37</td>
+</tr>
+</table><br><hr><a name="IDTWUIUBDZNZFSGPCTS2JD2G2XMEAZDK1DFKBIG2OHSA11NMHZ3P2D"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room respi (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('respi'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4648.528mil|Location1.Y=0mil|Location2.Y=2796.733mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4648.528mil|Location1.Y=0mil|Location2.Y=2796.733mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4843.937mil|Location1.Y=0mil|Location2.Y=2866.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4843.937mil|Location1.Y=0mil|Location2.Y=2866.559mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4256.559mil|Location1.Y=0mil|Location2.Y=2723.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4256.559mil|Location1.Y=0mil|Location2.Y=2723.937mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4256.559mil|Location1.Y=0mil|Location2.Y=2808.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4256.559mil|Location1.Y=0mil|Location2.Y=2808.937mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4213.937mil|Location1.Y=0mil|Location2.Y=2491.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4213.937mil|Location1.Y=0mil|Location2.Y=2491.559mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4133.937mil|Location1.Y=0mil|Location2.Y=2491.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4133.937mil|Location1.Y=0mil|Location2.Y=2491.559mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4053.937mil|Location1.Y=0mil|Location2.Y=2491.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4053.937mil|Location1.Y=0mil|Location2.Y=2491.559mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4763.937mil|Location1.Y=0mil|Location2.Y=2866.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4763.937mil|Location1.Y=0mil|Location2.Y=2866.559mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4848.937mil|Location1.Y=0mil|Location2.Y=2436.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4848.937mil|Location1.Y=0mil|Location2.Y=2436.559mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4768.937mil|Location1.Y=0mil|Location2.Y=2436.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4768.937mil|Location1.Y=0mil|Location2.Y=2436.559mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4543.937mil|Location1.Y=0mil|Location2.Y=2416.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4543.937mil|Location1.Y=0mil|Location2.Y=2416.559mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4453.937mil|Location1.Y=0mil|Location2.Y=2771.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4453.937mil|Location1.Y=0mil|Location2.Y=2771.559mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4803.937mil|Location1.Y=0mil|Location2.Y=1993.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4803.937mil|Location1.Y=0mil|Location2.Y=1993.937mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4503.937mil|Location1.Y=0mil|Location2.Y=2963.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4503.937mil|Location1.Y=0mil|Location2.Y=2963.937mil|Absolute=True">Room Definition Between Component on TopLayer And Rule on TopLayer</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDPNVRWWAN2I11BZLYZNAS2BNWUHDOCJ0KTR5VK3DLW3HHDLH0VPJP"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3962.063mil|Location2.X=3978.937mil|Location1.Y=2771.063mil|Location2.Y=2778.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3962.063mil|Location2.X=3978.937mil|Location1.Y=2771.063mil|Location2.Y=2778.937mil|Absolute=True">Track (3966mil,2775mil)(3975mil,2775mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3893.441mil|Location2.X=3956.559mil|Location1.Y=2743.441mil|Location2.Y=2806.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3893.441mil|Location2.X=3956.559mil|Location1.Y=2743.441mil|Location2.Y=2806.559mil|Absolute=True">Pad R9-2(3925mil,2775mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4171.063mil|Location2.X=4187.937mil|Location1.Y=2771.063mil|Location2.Y=2778.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4171.063mil|Location2.X=4187.937mil|Location1.Y=2771.063mil|Location2.Y=2778.937mil|Absolute=True">Track (4175mil,2775mil)(4184mil,2775mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4193.441mil|Location2.X=4256.559mil|Location1.Y=2743.441mil|Location2.Y=2806.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4193.441mil|Location2.X=4256.559mil|Location1.Y=2743.441mil|Location2.Y=2806.559mil|Absolute=True">Pad R9-1(4225mil,2775mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4171.063mil|Location2.X=4187.937mil|Location1.Y=2686.063mil|Location2.Y=2693.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4171.063mil|Location2.X=4187.937mil|Location1.Y=2686.063mil|Location2.Y=2693.937mil|Absolute=True">Track (4175mil,2690mil)(4184mil,2690mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4193.441mil|Location2.X=4256.559mil|Location1.Y=2658.441mil|Location2.Y=2721.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4193.441mil|Location2.X=4256.559mil|Location1.Y=2658.441mil|Location2.Y=2721.559mil|Absolute=True">Pad R10-2(4225mil,2690mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3962.063mil|Location2.X=3978.937mil|Location1.Y=2686.063mil|Location2.Y=2693.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3962.063mil|Location2.X=3978.937mil|Location1.Y=2686.063mil|Location2.Y=2693.937mil|Absolute=True">Track (3966mil,2690mil)(3975mil,2690mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3893.441mil|Location2.X=3956.559mil|Location1.Y=2658.441mil|Location2.Y=2721.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3893.441mil|Location2.X=3956.559mil|Location1.Y=2658.441mil|Location2.Y=2721.559mil|Absolute=True">Pad R10-1(3925mil,2690mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4416.063mil|Location2.X=4423.937mil|Location1.Y=2477.063mil|Location2.Y=2493.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4416.063mil|Location2.X=4423.937mil|Location1.Y=2477.063mil|Location2.Y=2493.937mil|Absolute=True">Track (4420mil,2481mil)(4420mil,2490mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4388.441mil|Location2.X=4451.559mil|Location1.Y=2408.441mil|Location2.Y=2471.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4388.441mil|Location2.X=4451.559mil|Location1.Y=2408.441mil|Location2.Y=2471.559mil|Absolute=True">Pad R1-2(4420mil,2440mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4416.063mil|Location2.X=4423.937mil|Location1.Y=2686.063mil|Location2.Y=2702.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4416.063mil|Location2.X=4423.937mil|Location1.Y=2686.063mil|Location2.Y=2702.937mil|Absolute=True">Track (4420mil,2690mil)(4420mil,2699mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4388.441mil|Location2.X=4451.559mil|Location1.Y=2708.441mil|Location2.Y=2771.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4388.441mil|Location2.X=4451.559mil|Location1.Y=2708.441mil|Location2.Y=2771.559mil|Absolute=True">Pad R1-1(4420mil,2740mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4506.063mil|Location2.X=4513.937mil|Location1.Y=2122.063mil|Location2.Y=2138.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4506.063mil|Location2.X=4513.937mil|Location1.Y=2122.063mil|Location2.Y=2138.937mil|Absolute=True">Track (4510mil,2126mil)(4510mil,2135mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4478.441mil|Location2.X=4541.559mil|Location1.Y=2053.441mil|Location2.Y=2116.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4478.441mil|Location2.X=4541.559mil|Location1.Y=2053.441mil|Location2.Y=2116.559mil|Absolute=True">Pad R2-2(4510mil,2085mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4506.063mil|Location2.X=4513.937mil|Location1.Y=2331.063mil|Location2.Y=2347.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4506.063mil|Location2.X=4513.937mil|Location1.Y=2331.063mil|Location2.Y=2347.937mil|Absolute=True">Track (4510mil,2335mil)(4510mil,2344mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4478.441mil|Location2.X=4541.559mil|Location1.Y=2353.441mil|Location2.Y=2416.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4478.441mil|Location2.X=4541.559mil|Location1.Y=2353.441mil|Location2.Y=2416.559mil|Absolute=True">Pad R2-1(4510mil,2385mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4176.063mil|Location2.X=4183.937mil|Location1.Y=2197.063mil|Location2.Y=2213.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4176.063mil|Location2.X=4183.937mil|Location1.Y=2197.063mil|Location2.Y=2213.937mil|Absolute=True">Track (4180mil,2201mil)(4180mil,2210mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4148.441mil|Location2.X=4211.559mil|Location1.Y=2128.441mil|Location2.Y=2191.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4148.441mil|Location2.X=4211.559mil|Location1.Y=2128.441mil|Location2.Y=2191.559mil|Absolute=True">Pad R8-2(4180mil,2160mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4176.063mil|Location2.X=4183.937mil|Location1.Y=2406.063mil|Location2.Y=2422.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4176.063mil|Location2.X=4183.937mil|Location1.Y=2406.063mil|Location2.Y=2422.937mil|Absolute=True">Track (4180mil,2410mil)(4180mil,2419mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4148.441mil|Location2.X=4211.559mil|Location1.Y=2428.441mil|Location2.Y=2491.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4148.441mil|Location2.X=4211.559mil|Location1.Y=2428.441mil|Location2.Y=2491.559mil|Absolute=True">Pad R8-1(4180mil,2460mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4096.063mil|Location2.X=4103.937mil|Location1.Y=2406.063mil|Location2.Y=2422.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4096.063mil|Location2.X=4103.937mil|Location1.Y=2406.063mil|Location2.Y=2422.937mil|Absolute=True">Track (4100mil,2410mil)(4100mil,2419mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4068.441mil|Location2.X=4131.559mil|Location1.Y=2428.441mil|Location2.Y=2491.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4068.441mil|Location2.X=4131.559mil|Location1.Y=2428.441mil|Location2.Y=2491.559mil|Absolute=True">Pad R7-2(4100mil,2460mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4096.063mil|Location2.X=4103.937mil|Location1.Y=2197.063mil|Location2.Y=2213.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4096.063mil|Location2.X=4103.937mil|Location1.Y=2197.063mil|Location2.Y=2213.937mil|Absolute=True">Track (4100mil,2201mil)(4100mil,2210mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4068.441mil|Location2.X=4131.559mil|Location1.Y=2128.441mil|Location2.Y=2191.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4068.441mil|Location2.X=4131.559mil|Location1.Y=2128.441mil|Location2.Y=2191.559mil|Absolute=True">Pad R7-1(4100mil,2160mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4016.063mil|Location2.X=4023.937mil|Location1.Y=2197.063mil|Location2.Y=2213.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4016.063mil|Location2.X=4023.937mil|Location1.Y=2197.063mil|Location2.Y=2213.937mil|Absolute=True">Track (4020mil,2201mil)(4020mil,2210mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3988.441mil|Location2.X=4051.559mil|Location1.Y=2128.441mil|Location2.Y=2191.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3988.441mil|Location2.X=4051.559mil|Location1.Y=2128.441mil|Location2.Y=2191.559mil|Absolute=True">Pad R6-2(4020mil,2160mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4016.063mil|Location2.X=4023.937mil|Location1.Y=2406.063mil|Location2.Y=2422.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4016.063mil|Location2.X=4023.937mil|Location1.Y=2406.063mil|Location2.Y=2422.937mil|Absolute=True">Track (4020mil,2410mil)(4020mil,2419mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3988.441mil|Location2.X=4051.559mil|Location1.Y=2428.441mil|Location2.Y=2491.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3988.441mil|Location2.X=4051.559mil|Location1.Y=2428.441mil|Location2.Y=2491.559mil|Absolute=True">Pad R6-1(4020mil,2460mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4731.063mil|Location2.X=4738.937mil|Location1.Y=2351.063mil|Location2.Y=2367.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4731.063mil|Location2.X=4738.937mil|Location1.Y=2351.063mil|Location2.Y=2367.937mil|Absolute=True">Track (4735mil,2355mil)(4735mil,2364mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4703.441mil|Location2.X=4766.559mil|Location1.Y=2373.441mil|Location2.Y=2436.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4703.441mil|Location2.X=4766.559mil|Location1.Y=2373.441mil|Location2.Y=2436.559mil|Absolute=True">Pad R3-2(4735mil,2405mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4731.063mil|Location2.X=4738.937mil|Location1.Y=2142.063mil|Location2.Y=2158.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4731.063mil|Location2.X=4738.937mil|Location1.Y=2142.063mil|Location2.Y=2158.937mil|Absolute=True">Track (4735mil,2146mil)(4735mil,2155mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4703.441mil|Location2.X=4766.559mil|Location1.Y=2073.441mil|Location2.Y=2136.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4703.441mil|Location2.X=4766.559mil|Location1.Y=2073.441mil|Location2.Y=2136.559mil|Absolute=True">Pad R3-1(4735mil,2105mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4811.063mil|Location2.X=4818.937mil|Location1.Y=2351.063mil|Location2.Y=2367.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4811.063mil|Location2.X=4818.937mil|Location1.Y=2351.063mil|Location2.Y=2367.937mil|Absolute=True">Track (4815mil,2355mil)(4815mil,2364mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4783.441mil|Location2.X=4846.559mil|Location1.Y=2373.441mil|Location2.Y=2436.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4783.441mil|Location2.X=4846.559mil|Location1.Y=2373.441mil|Location2.Y=2436.559mil|Absolute=True">Pad R4-2(4815mil,2405mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4811.063mil|Location2.X=4818.937mil|Location1.Y=2142.063mil|Location2.Y=2158.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4811.063mil|Location2.X=4818.937mil|Location1.Y=2142.063mil|Location2.Y=2158.937mil|Absolute=True">Track (4815mil,2146mil)(4815mil,2155mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4783.441mil|Location2.X=4846.559mil|Location1.Y=2073.441mil|Location2.Y=2136.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4783.441mil|Location2.X=4846.559mil|Location1.Y=2073.441mil|Location2.Y=2136.559mil|Absolute=True">Pad R4-1(4815mil,2105mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4726.063mil|Location2.X=4733.937mil|Location1.Y=2781.063mil|Location2.Y=2797.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4726.063mil|Location2.X=4733.937mil|Location1.Y=2781.063mil|Location2.Y=2797.937mil|Absolute=True">Track (4730mil,2785mil)(4730mil,2794mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4698.441mil|Location2.X=4761.559mil|Location1.Y=2803.441mil|Location2.Y=2866.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4698.441mil|Location2.X=4761.559mil|Location1.Y=2803.441mil|Location2.Y=2866.559mil|Absolute=True">Pad R5-2(4730mil,2835mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4726.063mil|Location2.X=4733.937mil|Location1.Y=2572.063mil|Location2.Y=2588.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4726.063mil|Location2.X=4733.937mil|Location1.Y=2572.063mil|Location2.Y=2588.937mil|Absolute=True">Track (4730mil,2576mil)(4730mil,2585mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4698.441mil|Location2.X=4761.559mil|Location1.Y=2503.441mil|Location2.Y=2566.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4698.441mil|Location2.X=4761.559mil|Location1.Y=2503.441mil|Location2.Y=2566.559mil|Absolute=True">Pad R5-1(4730mil,2535mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4806.063mil|Location2.X=4813.937mil|Location1.Y=2781.063mil|Location2.Y=2797.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4806.063mil|Location2.X=4813.937mil|Location1.Y=2781.063mil|Location2.Y=2797.937mil|Absolute=True">Track (4810mil,2785mil)(4810mil,2794mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4778.441mil|Location2.X=4841.559mil|Location1.Y=2803.441mil|Location2.Y=2866.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4778.441mil|Location2.X=4841.559mil|Location1.Y=2803.441mil|Location2.Y=2866.559mil|Absolute=True">Pad R12-2(4810mil,2835mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4806.063mil|Location2.X=4813.937mil|Location1.Y=2572.063mil|Location2.Y=2588.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4806.063mil|Location2.X=4813.937mil|Location1.Y=2572.063mil|Location2.Y=2588.937mil|Absolute=True">Track (4810mil,2576mil)(4810mil,2585mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4778.441mil|Location2.X=4841.559mil|Location1.Y=2503.441mil|Location2.Y=2566.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4778.441mil|Location2.X=4841.559mil|Location1.Y=2503.441mil|Location2.Y=2566.559mil|Absolute=True">Pad R12-1(4810mil,2535mil)  Multi-Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDR1XLOA5BLTOOK2MRL1AYCORWS12O1ZFVTJ11XFKTC1IWKQCNWUC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4050.477mil|Location2.X=4189.523mil|Location1.Y=1950.477mil|Location2.Y=2089.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4050.477mil|Location2.X=4189.523mil|Location1.Y=1950.477mil|Location2.Y=2089.523mil|Absolute=True">Hole Size Constraint (137.795mil &gt; 100mil) : Pad Free-8(4120mil,2020mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

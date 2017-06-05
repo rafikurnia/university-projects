@@ -1,0 +1,38 @@
+Added Component: Designator=220(AXIAL-0.3)
+Added Component: Designator=330-1(AXIAL-0.3)
+Added Component: Designator=BC547(TO-226-AA)
+Added Component: Designator=D?(DO-41)
+Added Component: Designator=K?(My_REL_cochick)
+Added Component: Designator=Led(My_LED3MM)
+Added Component: Designator=P?(HDR1X7)
+Added Pin To Net: NetName=+5 Pin=220-1
+Added Pin To Net: NetName=+5 Pin=K?-2
+Added Pin To Net: NetName=+5 Pin=P?-3
+Added Net: Name=+5
+Added Pin To Net: NetName=GND Pin=BC547-3
+Added Pin To Net: NetName=GND Pin=K?-P1
+Added Pin To Net: NetName=GND Pin=K?-P2
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Net: Name=GND
+Added Pin To Net: NetName=Net220_2 Pin=220-2
+Added Pin To Net: NetName=Net220_2 Pin=Led-A
+Added Net: Name=Net220_2
+Added Pin To Net: NetName=Net330-1_1 Pin=330-1-1
+Added Pin To Net: NetName=Net330-1_1 Pin=P?-7
+Added Net: Name=Net330-1_1
+Added Pin To Net: NetName=Net330-1_2 Pin=330-1-2
+Added Pin To Net: NetName=Net330-1_2 Pin=BC547-2
+Added Net: Name=Net330-1_2
+Added Pin To Net: NetName=NetBC547_1 Pin=BC547-1
+Added Pin To Net: NetName=NetBC547_1 Pin=D?-1
+Added Pin To Net: NetName=NetBC547_1 Pin=K?-1
+Added Pin To Net: NetName=NetBC547_1 Pin=Led-K
+Added Net: Name=NetBC547_1
+Added Pin To Net: NetName=NetK?_O1 Pin=K?-O1
+Added Pin To Net: NetName=NetK?_O1 Pin=K?-O2
+Added Pin To Net: NetName=NetK?_O1 Pin=P?-5
+Added Net: Name=NetK?_O1
+Added Pin To Net: NetName=VCC Pin=D?-2
+Added Net: Name=VCC
+Added Class: Name=relayKecil
+Added Room: Name=relayKecil

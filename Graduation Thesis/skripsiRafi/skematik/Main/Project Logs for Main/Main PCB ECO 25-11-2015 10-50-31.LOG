@@ -1,0 +1,93 @@
+Added Component: Designator=AD8232(HDR1X6)
+Added Component: Designator=Buzzer(HDR1X2)
+Added Component: Designator=ESP8266 Atas(HDR1X4)
+Added Component: Designator=ESP8266 Kanan(HDR1X11)
+Added Component: Designator=ESP8266 Kiri(HDR1X11)
+Added Component: Designator=Kanan Atas(HDR2X16)
+Added Component: Designator=Kanan Bawah(HDR2X16)
+Added Component: Designator=Kiri Atas(HDR2X16)
+Added Component: Designator=Kiri Bawah(HDR2X16)
+Added Component: Designator=o(My_1X03)
+Added Component: Designator=Power(My_1X04)
+Added Component: Designator=Relay(My_1X04)
+Added Component: Designator=Some(HDR1X8)
+Added Component: Designator=Stepstick(My_1X06)
+Added Pin To Net: NetName=GND Pin=AD8232-1
+Added Pin To Net: NetName=+3.3 Pin=AD8232-2
+Added Pin To Net: NetName=NetAD8232_3 Pin=AD8232-3
+Added Pin To Net: NetName=NetAD8232_4 Pin=AD8232-4
+Added Pin To Net: NetName=NetAD8232_5 Pin=AD8232-5
+Added Pin To Net: NetName=NetBuzzer_1 Pin=Buzzer-1
+Added Pin To Net: NetName=GND Pin=Buzzer-2
+Added Pin To Net: NetName=NetESP8266 Atas_1 Pin=ESP8266 Atas-1
+Added Pin To Net: NetName=NetESP8266 Atas_2 Pin=ESP8266 Atas-2
+Added Pin To Net: NetName=NetESP8266 Atas_3 Pin=ESP8266 Atas-3
+Added Pin To Net: NetName=+3.3 Pin=ESP8266 Atas-4
+Added Pin To Net: NetName=NetESP8266 Atas_1 Pin=ESP8266 Kanan-1
+Added Pin To Net: NetName=+3.3 Pin=ESP8266 Kanan-6
+Added Pin To Net: NetName=+3.3 Pin=ESP8266 Kanan-7
+Added Pin To Net: NetName=NetESP8266 Atas_1 Pin=ESP8266 Kanan-10
+Added Pin To Net: NetName=NetESP8266 Atas_1 Pin=ESP8266 Kanan-11
+Added Pin To Net: NetName=+3.3 Pin=ESP8266 Kiri-1
+Added Pin To Net: NetName=+3.3 Pin=ESP8266 Kiri-2
+Added Pin To Net: NetName=+3.3 Pin=ESP8266 Kiri-10
+Added Pin To Net: NetName=+3.3 Pin=ESP8266 Kiri-11
+Added Pin To Net: NetName=+3.3 Pin=Kanan Atas-1
+Added Pin To Net: NetName=+3.3 Pin=Kanan Atas-2
+Added Pin To Net: NetName=GND Pin=Kanan Atas-11
+Added Pin To Net: NetName=+3.3 Pin=Kanan Atas-12
+Added Pin To Net: NetName=NetKanan Atas_13 Pin=Kanan Atas-13
+Added Pin To Net: NetName=NetAD8232_3 Pin=Kanan Atas-19
+Added Pin To Net: NetName=NetKanan Atas_20 Pin=Kanan Atas-20
+Added Pin To Net: NetName=NetKanan Atas_21 Pin=Kanan Atas-21
+Added Pin To Net: NetName=NetKanan Atas_24 Pin=Kanan Atas-24
+Added Pin To Net: NetName=NetKanan Atas_27 Pin=Kanan Atas-27
+Added Pin To Net: NetName=GND Pin=Kanan Atas-29
+Added Pin To Net: NetName=NetKanan Bawah_29 Pin=Kanan Bawah-29
+Added Pin To Net: NetName=NetKanan Bawah_30 Pin=Kanan Bawah-30
+Added Pin To Net: NetName=GND Pin=Kanan Bawah-31
+Added Pin To Net: NetName=GND Pin=Kanan Bawah-32
+Added Pin To Net: NetName=+5 Pin=Kiri Atas-1
+Added Pin To Net: NetName=+5 Pin=Kiri Atas-2
+Added Pin To Net: NetName=NetBuzzer_1 Pin=Kiri Atas-9
+Added Pin To Net: NetName=NetAD8232_5 Pin=Kiri Atas-13
+Added Pin To Net: NetName=NetAD8232_4 Pin=Kiri Atas-15
+Added Pin To Net: NetName=NetKiri Atas_16 Pin=Kiri Atas-16
+Added Pin To Net: NetName=NetKiri Atas_28 Pin=Kiri Atas-28
+Added Pin To Net: NetName=NetESP8266 Atas_2 Pin=Kiri Bawah-19
+Added Pin To Net: NetName=NetESP8266 Atas_3 Pin=Kiri Bawah-20
+Added Pin To Net: NetName=GND Pin=Kiri Bawah-31
+Added Pin To Net: NetName=GND Pin=Kiri Bawah-32
+Added Pin To Net: NetName=GND Pin=o-1
+Added Pin To Net: NetName=+5 Pin=o-2
+Added Pin To Net: NetName=GND Pin=Power-1
+Added Pin To Net: NetName=+7.4 Pin=Power-2
+Added Pin To Net: NetName=+5 Pin=Power-3
+Added Pin To Net: NetName=+3.3 Pin=Power-4
+Added Pin To Net: NetName=GND Pin=Relay-1
+Added Pin To Net: NetName=+5 Pin=Relay-2
+Added Pin To Net: NetName=NetESP8266 Atas_1 Pin=Relay-4
+Added Pin To Net: NetName=GND Pin=Some-1
+Added Pin To Net: NetName=+5 Pin=Some-2
+Added Pin To Net: NetName=NetKanan Atas_27 Pin=Some-3
+Added Pin To Net: NetName=NetKanan Atas_13 Pin=Some-4
+Added Pin To Net: NetName=NetKanan Atas_24 Pin=Some-5
+Added Pin To Net: NetName=NetKiri Atas_28 Pin=Some-6
+Added Pin To Net: NetName=NetKanan Atas_21 Pin=Some-7
+Added Pin To Net: NetName=GND Pin=Stepstick-1
+Added Pin To Net: NetName=+7.4 Pin=Stepstick-2
+Added Pin To Net: NetName=+5 Pin=Stepstick-3
+Added Pin To Net: NetName=NetKanan Bawah_29 Pin=Stepstick-4
+Added Pin To Net: NetName=NetKiri Atas_16 Pin=Stepstick-5
+Added Pin To Net: NetName=NetKanan Bawah_30 Pin=Stepstick-6
+Added Pin To Net: NetName=NetKanan Atas_23 Pin=Kanan Atas-23
+Added Pin To Net: NetName=NetKanan Atas_23 Pin=o-3
+Added Net: Name=NetKanan Atas_23
+Added Pin To Net: NetName=NetKanan Atas_28 Pin=Kanan Atas-28
+Added Pin To Net: NetName=NetKanan Atas_28 Pin=Some-8
+Added Net: Name=NetKanan Atas_28
+Added Pin To Net: NetName=NetKiri Atas_14 Pin=Kiri Atas-14
+Added Pin To Net: NetName=NetKiri Atas_14 Pin=Relay-3
+Added Net: Name=NetKiri Atas_14
+Added Class: Name=Main
+Added Room: Name=Main

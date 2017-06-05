@@ -1,0 +1,32 @@
+Added Component: Designator=220(AXIAL-0.3)
+Added Component: Designator=330-1(AXIAL-0.3)
+Added Component: Designator=BC547(TO-226-AA)
+Added Component: Designator=In(My_1X04)
+Added Component: Designator=Led(My_LED3MM)
+Added Component: Designator=Relay(My_rel)
+Added Pin To Net: NetName=+5 Pin=220-1
+Added Pin To Net: NetName=+5 Pin=In-2
+Added Pin To Net: NetName=+5 Pin=Relay-5
+Added Net: Name=+5
+Added Pin To Net: NetName=GND Pin=BC547-3
+Added Pin To Net: NetName=GND Pin=In-1
+Added Pin To Net: NetName=GND Pin=Relay-1
+Added Net: Name=GND
+Added Pin To Net: NetName=Net220_2 Pin=220-2
+Added Pin To Net: NetName=Net220_2 Pin=Led-A
+Added Net: Name=Net220_2
+Added Pin To Net: NetName=Net330-1_1 Pin=330-1-1
+Added Pin To Net: NetName=Net330-1_1 Pin=In-3
+Added Net: Name=Net330-1_1
+Added Pin To Net: NetName=Net330-1_2 Pin=330-1-2
+Added Pin To Net: NetName=Net330-1_2 Pin=BC547-2
+Added Net: Name=Net330-1_2
+Added Pin To Net: NetName=NetBC547_1 Pin=BC547-1
+Added Pin To Net: NetName=NetBC547_1 Pin=Led-K
+Added Pin To Net: NetName=NetBC547_1 Pin=Relay-4
+Added Net: Name=NetBC547_1
+Added Pin To Net: NetName=NetIn_4 Pin=In-4
+Added Pin To Net: NetName=NetIn_4 Pin=Relay-3
+Added Net: Name=NetIn_4
+Added Class: Name=Relay
+Added Room: Name=Relay

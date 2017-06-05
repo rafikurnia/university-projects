@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=GNDS Pin=Saklar-1
+Removed Pin From Net: NetName=GND Pin=Saklar-2
+Removed Pin From Net: NetName=GNDS Pin=Source-1
+Removed Pin From Net: NetName=7 Pin=Source-2
+Removed Member From Class: ClassName=Main2 Member=Saklar
+Removed Member From Class: ClassName=Main2 Member=Source
+Added Component: Designator=Source n Saklar(691311700004)
+Added Pin To Net: NetName=GNDS Pin=Source n Saklar-1
+Added Pin To Net: NetName=7 Pin=Source n Saklar-2
+Added Pin To Net: NetName=GNDS Pin=Source n Saklar-3
+Added Pin To Net: NetName=GND Pin=Source n Saklar-4
+Added Member To Class: ClassName=Main2 Member=Component Source n Saklar WE-Terminal Blocks Plugable Type 691311700004
+Added Room: Name=Main2

@@ -1,0 +1,5 @@
+Added Component: Designator=C?(691311700003)
+Added Pin To Net: NetName=GND Pin=C?-1
+Added Pin To Net: NetName=+5 Pin=C?-2
+Added Pin To Net: NetName=+3.3 Pin=C?-3
+Added Member To Class: ClassName=power Member=Component C? WE-Terminal Blocks Plugable Type 691311700003

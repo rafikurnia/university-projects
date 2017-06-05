@@ -1,0 +1,19 @@
+Added Component: Designator=0.1uF(My_cap100n)
+Added Component: Designator=0.33uF(My_cap100n)
+Added Component: Designator=P(My_1X03)
+Added Component: Designator=Regulator 5V(My_TO-220)
+Added Pin To Net: NetName=GND Pin=0.1uF-1
+Added Pin To Net: NetName=+5 Pin=0.1uF-2
+Added Pin To Net: NetName=+7.4 Pin=0.33uF-1
+Added Pin To Net: NetName=GND Pin=0.33uF-2
+Added Pin To Net: NetName=GND Pin=P-1
+Added Pin To Net: NetName=+5 Pin=P-2
+Added Pin To Net: NetName=+7.4 Pin=P-3
+Added Pin To Net: NetName=+7.4 Pin=Regulator 5V-1
+Added Pin To Net: NetName=GND Pin=Regulator 5V-2
+Added Pin To Net: NetName=+5 Pin=Regulator 5V-3
+Added Member To Class: ClassName=7805 Member=Component 0.1uF
+Added Member To Class: ClassName=7805 Member=Component 0.33uF
+Added Member To Class: ClassName=7805 Member=Component P Output
+Added Member To Class: ClassName=7805 Member=Component Regulator 5V
+Added Room: Name=7805

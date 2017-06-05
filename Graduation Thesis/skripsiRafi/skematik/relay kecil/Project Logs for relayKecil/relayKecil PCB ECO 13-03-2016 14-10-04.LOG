@@ -1,0 +1,6 @@
+Added Component: Designator=BC547(TO-92)
+Added Pin To Net: NetName=NetBC547_1 Pin=BC547-1
+Added Pin To Net: NetName=Net330-1_2 Pin=BC547-2
+Added Pin To Net: NetName=GND Pin=BC547-3
+Added Member To Class: ClassName=relayKecil Member=Component BC547 NPN
+Added Room: Name=relayKecil

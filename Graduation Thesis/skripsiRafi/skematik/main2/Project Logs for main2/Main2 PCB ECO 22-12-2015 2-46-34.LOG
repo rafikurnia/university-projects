@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=GND Pin=Out-1
+Removed Pin From Net: NetName=5 Pin=Out-2
+Removed Pin From Net: NetName=3.3 Pin=Out-3
+Removed Pin From Net: NetName=GND Pin=Ubec5In-1
+Removed Pin From Net: NetName=5 Pin=Ubec5In-2
+Removed Member From Class: ClassName=Main2 Member=Out
+Removed Member From Class: ClassName=Main2 Member=Ubec5In
+Added Component: Designator=Out n Ubec5 In(691311700005)
+Added Pin To Net: NetName=GND Pin=Out n Ubec5 In-1
+Added Pin To Net: NetName=5 Pin=Out n Ubec5 In-2
+Added Pin To Net: NetName=3.3 Pin=Out n Ubec5 In-3
+Added Pin To Net: NetName=GND Pin=Out n Ubec5 In-4
+Added Pin To Net: NetName=5 Pin=Out n Ubec5 In-5
+Added Member To Class: ClassName=Main2 Member=Component Out n Ubec5 In WE-Terminal Blocks Plugable Type 691311700005
+Added Room: Name=Main2

@@ -1,0 +1,38 @@
+Removed Pin From Net: NetName=GND Pin=G 5-1
+Removed Pin From Net: NetName=+5 Pin=G 5-2
+Removed Pin From Net: NetName=NetP?_3 Pin=G 5-3
+Removed Pin From Net: NetName=NetP?_4 Pin=G 5-4
+Removed Pin From Net: NetName=NetP?_5 Pin=G 5-5
+Removed Pin From Net: NetName=NetP?_6 Pin=G 5-6
+Removed Pin From Net: NetName=NetP?_7 Pin=G 5-7
+Removed Member From Class: ClassName=Some Member=G 5
+Change Component Designator: OldDesignator=Temp NewDesignator=Temperature
+Added Component: Designator=0.01uF(My_cap100n)
+Added Component: Designator=1uF(My_cap100n)
+Added Component: Designator=470pF(My_cap100n)
+Added Component: Designator=P?(HDR1X8)
+Added Component: Designator=Pressure(HDR1X6)
+Added Pin To Net: NetName=GND Pin=0.01uF-1
+Added Pin To Net: NetName=+5 Pin=0.01uF-2
+Added Pin To Net: NetName=GND Pin=1uF-1
+Added Pin To Net: NetName=+5 Pin=1uF-2
+Added Pin To Net: NetName=GND Pin=470pF-1
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Pin To Net: NetName=+5 Pin=P?-2
+Added Pin To Net: NetName=NetP?_3 Pin=P?-3
+Added Pin To Net: NetName=NetP?_4 Pin=P?-4
+Added Pin To Net: NetName=NetP?_5 Pin=P?-5
+Added Pin To Net: NetName=NetP?_6 Pin=P?-6
+Added Pin To Net: NetName=NetP?_7 Pin=P?-7
+Added Pin To Net: NetName=GND Pin=Pressure-2
+Added Pin To Net: NetName=+5 Pin=Pressure-3
+Added Pin To Net: NetName=Net470pF_2 Pin=470pF-2
+Added Pin To Net: NetName=Net470pF_2 Pin=P?-8
+Added Pin To Net: NetName=Net470pF_2 Pin=Pressure-1
+Added Net: Name=Net470pF_2
+Added Member To Class: ClassName=Some Member=Component 0.01uF Cap
+Added Member To Class: ClassName=Some Member=Component 1uF Cap
+Added Member To Class: ClassName=Some Member=Component 470pF Cap
+Added Member To Class: ClassName=Some Member=Component P? Header 8
+Added Member To Class: ClassName=Some Member=Component Pressure Header 6
+Added Room: Name=Some

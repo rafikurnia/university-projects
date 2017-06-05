@@ -1,0 +1,12 @@
+Change Component Designator: OldDesignator=7805 NewDesignator=U?
+Added Component: Designator=Power(My_ Power_Connector)
+Added Component: Designator=Switch(My_ Power_Connector)
+Added Pin To Net: NetName=+7.4 Pin=Power-1
+Added Pin To Net: NetName=+3.3 Pin=Power-2
+Added Pin To Net: NetName=+3.3 Pin=Switch-1
+Added Pin To Net: NetName=GND Pin=Switch-2
+Change Net Name : Old Net Name=+3.3 New Net Name=NetPower_2
+Added Member To Class: ClassName=7805 Member=Component Out
+Added Member To Class: ClassName=7805 Member=Component Power Power Connector
+Added Member To Class: ClassName=7805 Member=Component Switch Power Connector
+Added Room: Name=7805

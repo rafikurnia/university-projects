@@ -1,0 +1,69 @@
+Added Component: Designator=IN+(HDR1X2)
+Added Component: Designator=IN-(HDR1X2)
+Added Component: Designator=JKa(HDR1X6)
+Added Component: Designator=JKi(HDR1X6)
+Added Component: Designator=Kanan(HDR1X12)
+Added Component: Designator=Kiri(HDR1X12)
+Added Component: Designator=Out 7V(691311700006)
+Added Component: Designator=OUT+(HDR1X2)
+Added Component: Designator=OUT-(HDR1X2)
+Added Component: Designator=Out(691311700003)
+Added Component: Designator=Saklar(691311700002)
+Added Component: Designator=Source(691311700002)
+Added Component: Designator=Ubec5In(691311700002)
+Added Pin To Net: NetName=3.3 Pin=OUT+-1
+Added Pin To Net: NetName=3.3 Pin=OUT+-2
+Added Pin To Net: NetName=3.3 Pin=Out-3
+Added Net: Name=3.3
+Added Pin To Net: NetName=5 Pin=JKa-2
+Added Pin To Net: NetName=5 Pin=JKa-3
+Added Pin To Net: NetName=5 Pin=JKi-2
+Added Pin To Net: NetName=5 Pin=JKi-3
+Added Pin To Net: NetName=5 Pin=Kanan-4
+Added Pin To Net: NetName=5 Pin=Out-2
+Added Pin To Net: NetName=5 Pin=Ubec5In-2
+Added Net: Name=5
+Added Pin To Net: NetName=7 Pin=IN+-1
+Added Pin To Net: NetName=7 Pin=IN+-2
+Added Pin To Net: NetName=7 Pin=Kanan-1
+Added Pin To Net: NetName=7 Pin=Out 7V-2
+Added Pin To Net: NetName=7 Pin=Out 7V-4
+Added Pin To Net: NetName=7 Pin=Out 7V-6
+Added Pin To Net: NetName=7 Pin=Source-2
+Added Net: Name=7
+Added Pin To Net: NetName=GNDS Pin=Saklar-1
+Added Pin To Net: NetName=GNDS Pin=Source-1
+Added Net: Name=GNDS
+Added Pin To Net: NetName=GND Pin=IN--1
+Added Pin To Net: NetName=GND Pin=IN--2
+Added Pin To Net: NetName=GND Pin=JKa-1
+Added Pin To Net: NetName=GND Pin=JKi-1
+Added Pin To Net: NetName=GND Pin=Kanan-2
+Added Pin To Net: NetName=GND Pin=Kiri-4
+Added Pin To Net: NetName=GND Pin=Out 7V-1
+Added Pin To Net: NetName=GND Pin=Out 7V-3
+Added Pin To Net: NetName=GND Pin=Out 7V-5
+Added Pin To Net: NetName=GND Pin=Out-1
+Added Pin To Net: NetName=GND Pin=OUT--1
+Added Pin To Net: NetName=GND Pin=OUT--2
+Added Pin To Net: NetName=GND Pin=Saklar-2
+Added Pin To Net: NetName=GND Pin=Ubec5In-1
+Added Net: Name=GND
+Added Pin To Net: NetName=NetJKa_5 Pin=JKa-5
+Added Pin To Net: NetName=NetJKa_5 Pin=Kiri-7
+Added Net: Name=NetJKa_5
+Added Pin To Net: NetName=NetJKa_6 Pin=JKa-6
+Added Pin To Net: NetName=NetJKa_6 Pin=Kiri-8
+Added Net: Name=NetJKa_6
+Added Pin To Net: NetName=NetJKi_5 Pin=JKi-5
+Added Pin To Net: NetName=NetJKi_5 Pin=Kiri-5
+Added Net: Name=NetJKi_5
+Added Pin To Net: NetName=NetJKi_6 Pin=JKi-6
+Added Pin To Net: NetName=NetJKi_6 Pin=Kiri-6
+Added Net: Name=NetJKi_6
+Added Pin To Net: NetName=NetKanan_11 Pin=Kanan-11
+Added Net: Name=NetKanan_11
+Added Pin To Net: NetName=NetKanan_12 Pin=Kanan-12
+Added Net: Name=NetKanan_12
+Added Class: Name=Main2
+Added Room: Name=Main2

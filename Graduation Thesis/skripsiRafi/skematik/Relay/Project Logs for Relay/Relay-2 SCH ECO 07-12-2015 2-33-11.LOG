@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=Relay Old Footprint=My_REL_cochick New Footprint=My_rel
+Change Component Designator: OldDesignator=330-1 NewDesignator=330
+Change Component Designator: OldDesignator=P? NewDesignator=G  5  O   I

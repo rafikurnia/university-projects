@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=GND Pin=G 7 5 D S E-1
+Removed Pin From Net: NetName=+7.4 Pin=G 7 5 D S E-2
+Removed Pin From Net: NetName=+5 Pin=G 7 5 D S E-3
+Removed Pin From Net: NetName=NetOut_4 Pin=G 7 5 D S E-4
+Removed Pin From Net: NetName=NetOut_5 Pin=G 7 5 D S E-5
+Removed Pin From Net: NetName=NetOut_6 Pin=G 7 5 D S E-6
+Removed Member From Class: ClassName=StepStick Member=G 7 5 D S E
+Change Component Designator: OldDesignator=2B 2A 1A 1B NewDesignator=Stepper
+Added Component: Designator=P?(HDR1X11)
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Pin To Net: NetName=+7.4 Pin=P?-3
+Added Pin To Net: NetName=+5 Pin=P?-5
+Added Pin To Net: NetName=NetOut_4 Pin=P?-7
+Added Pin To Net: NetName=NetOut_5 Pin=P?-9
+Added Pin To Net: NetName=NetOut_6 Pin=P?-11
+Change Net Name : Old Net Name=NetOut_4 New Net Name=NetP?_7
+Change Net Name : Old Net Name=NetOut_5 New Net Name=NetP?_9
+Change Net Name : Old Net Name=NetOut_6 New Net Name=NetP?_11
+Change Class Name : Old Net Name=StepStick New Net Name=StepStick-2
+Added Member To Class: ClassName=StepStick-2 Member=Component P? Header 11
+Added Room: Name=StepStick-2

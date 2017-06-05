@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=GND Pin=D 5 G-1
+Removed Pin From Net: NetName=+5 Pin=D 5 G-2
+Removed Pin From Net: NetName=Net10K Juga_1 Pin=D 5 G-3
+Removed Member From Class: ClassName=Breath Member=D 5 G
+Change Component Designator: OldDesignator=10K NewDesignator=10K-2
+Change Component Designator: OldDesignator=10K NewDesignator=10K Juga
+Change Component Designator: OldDesignator=330 NewDesignator=330-2
+Change Component Designator: OldDesignator=Input NewDesignator=PPP
+Added Component: Designator=Out(HDR1X5)
+Added Pin To Net: NetName=GND Pin=Out-1
+Added Pin To Net: NetName=+5 Pin=Out-3
+Added Pin To Net: NetName=Net10K Juga_1 Pin=Out-5
+Change Class Name : Old Net Name=Breath New Net Name=Breath-2
+Added Member To Class: ClassName=Breath-2 Member=Component 10K Juga 10K
+Added Member To Class: ClassName=Breath-2 Member=Component Out Header 5
+Added Room: Name=Breath-2

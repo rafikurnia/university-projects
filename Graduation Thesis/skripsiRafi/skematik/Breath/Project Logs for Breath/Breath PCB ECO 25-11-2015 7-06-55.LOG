@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=Input Old Footprint=My_1X02 New Footprint=HDR1X2
+Change Component Designator: OldDesignator=10K NewDesignator=10K-2
+Change Component Designator: OldDesignator=10K NewDesignator=10K Juga
+Change Component Designator: OldDesignator=330 NewDesignator=330-2
+Change Component Designator: OldDesignator=D 5 G NewDesignator=o
+Change Component Designator: OldDesignator=Input NewDesignator=PPP
+Added Member To Class: ClassName=Breath Member=Component 10K Juga 10K
+Added Member To Class: ClassName=Breath Member=Component 2200uF
+Added Room: Name=Breath

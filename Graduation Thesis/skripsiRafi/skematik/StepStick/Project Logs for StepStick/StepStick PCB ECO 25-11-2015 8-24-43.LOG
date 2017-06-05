@@ -1,0 +1,40 @@
+Added Component: Designator=Out(My_1X06)
+Added Component: Designator=Stepper(My_1X04)
+Added Component: Designator=StepStick Kanan(HDR1X8)
+Added Component: Designator=StepStick Kiri(HDR1X8)
+Added Pin To Net: NetName=+5 Pin=Out-3
+Added Pin To Net: NetName=+5 Pin=StepStick Kiri-2
+Added Net: Name=+5
+Added Pin To Net: NetName=+7.4 Pin=Out-2
+Added Pin To Net: NetName=+7.4 Pin=StepStick Kiri-8
+Added Net: Name=+7.4
+Added Pin To Net: NetName=GND Pin=Out-1
+Added Pin To Net: NetName=GND Pin=StepStick Kiri-1
+Added Pin To Net: NetName=GND Pin=StepStick Kiri-7
+Added Net: Name=GND
+Added Pin To Net: NetName=NetOut_4 Pin=Out-4
+Added Pin To Net: NetName=NetOut_4 Pin=StepStick Kanan-1
+Added Net: Name=NetOut_4
+Added Pin To Net: NetName=NetOut_5 Pin=Out-5
+Added Pin To Net: NetName=NetOut_5 Pin=StepStick Kanan-2
+Added Net: Name=NetOut_5
+Added Pin To Net: NetName=NetOut_6 Pin=Out-6
+Added Pin To Net: NetName=NetOut_6 Pin=StepStick Kanan-8
+Added Net: Name=NetOut_6
+Added Pin To Net: NetName=NetStepper_1 Pin=Stepper-1
+Added Pin To Net: NetName=NetStepper_1 Pin=StepStick Kiri-3
+Added Net: Name=NetStepper_1
+Added Pin To Net: NetName=NetStepper_2 Pin=Stepper-2
+Added Pin To Net: NetName=NetStepper_2 Pin=StepStick Kiri-4
+Added Net: Name=NetStepper_2
+Added Pin To Net: NetName=NetStepper_3 Pin=Stepper-3
+Added Pin To Net: NetName=NetStepper_3 Pin=StepStick Kiri-5
+Added Net: Name=NetStepper_3
+Added Pin To Net: NetName=NetStepper_4 Pin=Stepper-4
+Added Pin To Net: NetName=NetStepper_4 Pin=StepStick Kiri-6
+Added Net: Name=NetStepper_4
+Added Pin To Net: NetName=NetStepStick Kanan_3 Pin=StepStick Kanan-3
+Added Pin To Net: NetName=NetStepStick Kanan_3 Pin=StepStick Kanan-4
+Added Net: Name=NetStepStick Kanan_3
+Added Class: Name=StepStick
+Added Room: Name=StepStick

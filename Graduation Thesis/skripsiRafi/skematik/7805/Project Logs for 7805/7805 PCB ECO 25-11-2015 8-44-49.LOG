@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=GND Pin=Out-1
+Removed Pin From Net: NetName=+7.4 Pin=Out-2
+Removed Pin From Net: NetName=+5 Pin=Out-3
+Change Component Designator: OldDesignator=7805 NewDesignator=U?
+Added Component: Designator=Output(My_1X04)
+Added Pin To Net: NetName=GND Pin=Output-1
+Added Pin To Net: NetName=+7.4 Pin=Output-2
+Added Pin To Net: NetName=+5 Pin=Output-3
+Added Pin To Net: NetName=+3.3 Pin=Output-4
+Added Member To Class: ClassName=7805 Member=Component Output Header 4

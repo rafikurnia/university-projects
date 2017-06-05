@@ -1,0 +1,112 @@
+Protel Design System Design Rule Check
+PCB File : D:\Dropbox\Rafi und Claud\Skripsi\Rafi\PCB\respi\respi.PcbDoc
+Date     : 25/12/2015
+Time     : 4:40:05
+
+Processing Rule : Room respi (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('respi'))
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+   Violation between Room Definition Between Component on TopLayer And Rule on TopLayer
+Rule Violations :14
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Silk primitive without silk layer
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+   Violation between Track (3966mil,2775mil)(3975mil,2775mil)  Top Overlay and 
+                     Pad R9-2(3925mil,2775mil)  Multi-Layer
+   Violation between Track (4175mil,2775mil)(4184mil,2775mil)  Top Overlay and 
+                     Pad R9-1(4225mil,2775mil)  Multi-Layer
+   Violation between Track (4175mil,2690mil)(4184mil,2690mil)  Top Overlay and 
+                     Pad R10-2(4225mil,2690mil)  Multi-Layer
+   Violation between Track (3966mil,2690mil)(3975mil,2690mil)  Top Overlay and 
+                     Pad R10-1(3925mil,2690mil)  Multi-Layer
+   Violation between Track (4420mil,2481mil)(4420mil,2490mil)  Top Overlay and 
+                     Pad R1-2(4420mil,2440mil)  Multi-Layer
+   Violation between Track (4420mil,2690mil)(4420mil,2699mil)  Top Overlay and 
+                     Pad R1-1(4420mil,2740mil)  Multi-Layer
+   Violation between Track (4510mil,2126mil)(4510mil,2135mil)  Top Overlay and 
+                     Pad R2-2(4510mil,2085mil)  Multi-Layer
+   Violation between Track (4510mil,2335mil)(4510mil,2344mil)  Top Overlay and 
+                     Pad R2-1(4510mil,2385mil)  Multi-Layer
+   Violation between Track (4180mil,2201mil)(4180mil,2210mil)  Top Overlay and 
+                     Pad R8-2(4180mil,2160mil)  Multi-Layer
+   Violation between Track (4180mil,2410mil)(4180mil,2419mil)  Top Overlay and 
+                     Pad R8-1(4180mil,2460mil)  Multi-Layer
+   Violation between Track (4100mil,2410mil)(4100mil,2419mil)  Top Overlay and 
+                     Pad R7-2(4100mil,2460mil)  Multi-Layer
+   Violation between Track (4100mil,2201mil)(4100mil,2210mil)  Top Overlay and 
+                     Pad R7-1(4100mil,2160mil)  Multi-Layer
+   Violation between Track (4020mil,2201mil)(4020mil,2210mil)  Top Overlay and 
+                     Pad R6-2(4020mil,2160mil)  Multi-Layer
+   Violation between Track (4020mil,2410mil)(4020mil,2419mil)  Top Overlay and 
+                     Pad R6-1(4020mil,2460mil)  Multi-Layer
+   Violation between Track (4735mil,2355mil)(4735mil,2364mil)  Top Overlay and 
+                     Pad R3-2(4735mil,2405mil)  Multi-Layer
+   Violation between Track (4735mil,2146mil)(4735mil,2155mil)  Top Overlay and 
+                     Pad R3-1(4735mil,2105mil)  Multi-Layer
+   Violation between Track (4815mil,2355mil)(4815mil,2364mil)  Top Overlay and 
+                     Pad R4-2(4815mil,2405mil)  Multi-Layer
+   Violation between Track (4815mil,2146mil)(4815mil,2155mil)  Top Overlay and 
+                     Pad R4-1(4815mil,2105mil)  Multi-Layer
+   Violation between Track (4730mil,2785mil)(4730mil,2794mil)  Top Overlay and 
+                     Pad R5-2(4730mil,2835mil)  Multi-Layer
+   Violation between Track (4730mil,2576mil)(4730mil,2585mil)  Top Overlay and 
+                     Pad R5-1(4730mil,2535mil)  Multi-Layer
+   Violation between Track (4810mil,2785mil)(4810mil,2794mil)  Top Overlay and 
+                     Pad R12-2(4810mil,2835mil)  Multi-Layer
+   Violation between Track (4810mil,2576mil)(4810mil,2585mil)  Top Overlay and 
+                     Pad R12-1(4810mil,2535mil)  Multi-Layer
+Rule Violations :22
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+   Violation between Hole Size Constraint (137.795mil > 100mil) : Pad Free-8(4120mil,2020mil)  Multi-Layer
+Rule Violations :1
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=11.811mil) (Max=27.559mil) (Preferred=19.685mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=11.811mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+
+Violations Detected : 37
+Time Elapsed        : 00:00:00

@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetBC547_1 Pin=D?-1
+Removed Pin From Net: NetName=+5 Pin=D?-2
+Removed Member From Class: ClassName=relayKecil Member=D?
+Added Member To Class: ClassName=relayKecil Member=Component P? Header 7
+Added Room: Name=relayKecil

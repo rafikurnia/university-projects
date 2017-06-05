@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=5  G  3.3 5  G NewDesignator=Out n Ubec5 In
+Change Component Designator: OldDesignator=G   7  NewDesignator=Out 7V
+Change Component Designator: OldDesignator=Saklar 7  G NewDesignator=Source n Saklar
+Added Component: Designator=OUM(HDR1X2)
+Added Pin To Net: NetName=NetKanan_12 Pin=OUM-1
+Added Pin To Net: NetName=NetKanan_11 Pin=OUM-2
+Added Member To Class: ClassName=Main2 Member=Component OUM Header 2
+Added Room: Name=Main2

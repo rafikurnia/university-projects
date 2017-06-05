@@ -1,0 +1,39 @@
+Added Component: Designator=Breath(HDR1X5)
+Added Component: Designator=Power(HDR1X7)
+Added Component: Designator=Relay(HDR1X7)
+Added Component: Designator=Some(HDR1X15)
+Added Component: Designator=StepStick(HDR1X11)
+Added Pin To Net: NetName=GND Pin=Breath-1
+Added Pin To Net: NetName=+5 Pin=Breath-3
+Added Pin To Net: NetName=GND Pin=Power-1
+Added Pin To Net: NetName=+7.4 Pin=Power-3
+Added Pin To Net: NetName=+5 Pin=Power-5
+Added Pin To Net: NetName=+3.3 Pin=Power-7
+Added Pin To Net: NetName=GND Pin=Relay-1
+Added Pin To Net: NetName=+5 Pin=Relay-3
+Added Pin To Net: NetName=NetESP8266 Atas_1 Pin=Relay-5
+Added Pin To Net: NetName=NetKiri Atas_14 Pin=Relay-7
+Added Pin To Net: NetName=GND Pin=Some-1
+Added Pin To Net: NetName=+5 Pin=Some-3
+Added Pin To Net: NetName=NetKanan Atas_27 Pin=Some-5
+Added Pin To Net: NetName=NetKanan Atas_13 Pin=Some-7
+Added Pin To Net: NetName=NetKanan Atas_24 Pin=Some-9
+Added Pin To Net: NetName=NetKiri Atas_28 Pin=Some-11
+Added Pin To Net: NetName=NetKanan Atas_21 Pin=Some-13
+Added Pin To Net: NetName=NetKanan Atas_28 Pin=Some-15
+Added Pin To Net: NetName=GND Pin=StepStick-1
+Added Pin To Net: NetName=+7.4 Pin=StepStick-3
+Added Pin To Net: NetName=+5 Pin=StepStick-5
+Added Pin To Net: NetName=NetKanan Bawah_29 Pin=StepStick-7
+Added Pin To Net: NetName=NetKiri Atas_16 Pin=StepStick-9
+Added Pin To Net: NetName=NetKanan Bawah_30 Pin=StepStick-11
+Added Pin To Net: NetName=NetBreath_5 Pin=Breath-5
+Added Pin To Net: NetName=NetBreath_5 Pin=Kanan Atas-23
+Added Net: Name=NetBreath_5
+Change Class Name : Old Net Name=Main New Net Name=Main2
+Added Member To Class: ClassName=Main2 Member=Component Breath Header 5
+Added Member To Class: ClassName=Main2 Member=Component Power Header 7
+Added Member To Class: ClassName=Main2 Member=Component Relay Header 7
+Added Member To Class: ClassName=Main2 Member=Component Some Header 15
+Added Member To Class: ClassName=Main2 Member=Component StepStick Header 11
+Added Room: Name=Main2

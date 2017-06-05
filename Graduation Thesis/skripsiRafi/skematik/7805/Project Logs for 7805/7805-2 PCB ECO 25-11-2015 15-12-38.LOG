@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=7805 NewDesignator=U?
+Change Component Designator: OldDesignator=G   7  5  3.3 NewDesignator=P?
+Added Member To Class: ClassName=7805-2 Member=Component Power Power Connector
+Added Room: Name=7805-2

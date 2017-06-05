@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=330 NewDesignator=330-1
+Change Component Designator: OldDesignator=G  5  O   I NewDesignator=P?
+Added Component: Designator=K?(My_REL_cochick)
+Added Member To Class: ClassName=Relay-2 Member=Component K? Relay-DPDT
+Added Room: Name=Relay-2

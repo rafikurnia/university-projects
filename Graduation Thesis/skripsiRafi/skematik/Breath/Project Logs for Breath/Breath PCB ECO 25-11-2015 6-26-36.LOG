@@ -1,0 +1,33 @@
+Added Component: Designator=10K-2(AXIAL-0.3)
+Added Component: Designator=10K Juga(AXIAL-0.3)
+Added Component: Designator=330-2(AXIAL-0.3)
+Added Component: Designator=2200uF(RAD-0.3)
+Added Component: Designator=o(My_1X03)
+Added Component: Designator=PPP(My_1X02)
+Added Component: Designator=UA741CN(DIP8)
+Added Pin To Net: NetName=+5 Pin=o-2
+Added Pin To Net: NetName=+5 Pin=PPP-2
+Added Pin To Net: NetName=+5 Pin=UA741CN-7
+Added Net: Name=+5
+Added Pin To Net: NetName=GND Pin=10K-2-2
+Added Pin To Net: NetName=GND Pin=2200uF-2
+Added Pin To Net: NetName=GND Pin=o-1
+Added Pin To Net: NetName=GND Pin=UA741CN-4
+Added Net: Name=GND
+Added Pin To Net: NetName=Net10K-2_1 Pin=10K-2-1
+Added Pin To Net: NetName=Net10K-2_1 Pin=PPP-1
+Added Pin To Net: NetName=Net10K-2_1 Pin=UA741CN-3
+Added Net: Name=Net10K-2_1
+Added Pin To Net: NetName=Net10K Juga_1 Pin=10K Juga-1
+Added Pin To Net: NetName=Net10K Juga_1 Pin=o-3
+Added Pin To Net: NetName=Net10K Juga_1 Pin=UA741CN-6
+Added Net: Name=Net10K Juga_1
+Added Pin To Net: NetName=Net10K Juga_2 Pin=10K Juga-2
+Added Pin To Net: NetName=Net10K Juga_2 Pin=330-2-2
+Added Pin To Net: NetName=Net10K Juga_2 Pin=UA741CN-2
+Added Net: Name=Net10K Juga_2
+Added Pin To Net: NetName=Net330-2_1 Pin=330-2-1
+Added Pin To Net: NetName=Net330-2_1 Pin=2200uF-1
+Added Net: Name=Net330-2_1
+Added Class: Name=Breath
+Added Room: Name=Breath

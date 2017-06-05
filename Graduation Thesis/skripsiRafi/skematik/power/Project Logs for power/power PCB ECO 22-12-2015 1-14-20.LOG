@@ -1,0 +1,9 @@
+Added Component: Designator=C?(691313710002)
+Added Component: Designator=P?(HDR1X7)
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Pin To Net: NetName=+7.4 Pin=P?-3
+Added Pin To Net: NetName=+5 Pin=P?-5
+Added Pin To Net: NetName=+3.3 Pin=P?-7
+Added Member To Class: ClassName=power Member=Component C? WE-Terminal Blocks Plugable Type 691313710002
+Added Member To Class: ClassName=power Member=Component P? Header 7
+Added Room: Name=power

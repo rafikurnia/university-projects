@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=GND Pin=R11-2
+Removed Member From Class: ClassName=respi Member=R11
+Added Pin To Net: NetName=GND Pin=R10-2
+Added Room: Name=respi

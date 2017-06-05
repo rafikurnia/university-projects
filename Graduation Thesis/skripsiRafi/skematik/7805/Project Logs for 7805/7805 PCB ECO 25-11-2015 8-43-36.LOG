@@ -1,0 +1,11 @@
+Change Component Designator: OldDesignator=7   G NewDesignator=Power
+Change Component Designator: OldDesignator=7805 NewDesignator=U?
+Added Component: Designator=In(HDR1X2)
+Added Component: Designator=Out(HDR1X2)
+Added Pin To Net: NetName=GND Pin=In-1
+Added Pin To Net: NetName=+7.4 Pin=In-2
+Added Pin To Net: NetName=GND Pin=Out-1
+Added Pin To Net: NetName=+3.3 Pin=Out-2
+Added Net: Name=+3.3
+Added Member To Class: ClassName=7805 Member=Component In Header 2
+Added Room: Name=7805
